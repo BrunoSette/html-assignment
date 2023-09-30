@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>HTML Pizza</title>
+  </head>
+  <body>
+    <nav>
+      <h1>HTML Pizzaria</h1>
+      <ul>
+        <li><a href="default.html">HOME</a></li>
+        <li><a href="news.html">ORDERS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+      </ul>
+    </nav>
+    <header>
+      <img
+        src="https://i.pinimg.com/originals/45/eb/98/45eb98c8637d591a1bde451eb1bce941.png"
+        alt="Html Pizzaria"
+        height="300"
+        width="600"
+      />
+    </header>
+    <main>
+      <h2>Make your order online!</h2>
+      <form action="/order.php" method="post">
+        <ul>
+          <li>
+            <fieldset>
+              <legend>How many Pizzas?</legend>
+              <ul>
+                <li>
+                  <label for="Small"></label>
+                  <input
+                    type="number"
+                    id="soup"
+                    name="meal"
+                    value="soup"
+                    checked
+                  />
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset>
+              <legend>What is the size?</legend>
+              <ul>
+                <li>
+                  <label for="Small">Small</label>
+                  <input
+                    type="radio"
+                    id="soup"
+                    name="size"
+                    value="soup"
+                    checked
+                  />
+                </li>
+                <li>
+                  <label for="Medium">Medium</label>
+                  <input type="radio" id="curry" name="size" value="curry" />
+                </li>
+                <li>
+                  <label for="Large">Large</label>
+                  <input type="radio" id="pizza" name="size" value="large" />
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset>
+              <legend>What is the shape?</legend>
+              <ul>
+                <li>
+                  <label for="square">Square</label>
+                  <input
+                    type="radio"
+                    id="square"
+                    name="shape"
+                    value="square"
+                    checked
+                  />
+                </li>
+                <li>
+                  <label for="Medium">Rounded</label>
+                  <input type="radio" id="curry" name="shape" value="medium" />
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset>
+              <legend>Choose all the toppings</legend>
+              <ul>
+                <li>
+                  <label for="bacon">Bacon</label>
+                  <input
+                    type="checkbox"
+                    id="bacon"
+                    name="toppings"
+                    value="bacon"
+                  />
+                </li>
+                <li>
+                  <label for="corn">Corn</label>
+                  <input
+                    type="checkbox"
+                    id="corn"
+                    name="toppings"
+                    value="corn"
+                  />
+                </li>
+                <li>
+                  <label for="ham">Ham</label>
+                  <input type="checkbox" id="ham" name="toppings" value="ham" />
+                </li>
+                <li>
+                  <label for="pepperoni">Pepperoni</label>
+                  <input
+                    type="checkbox"
+                    id="pepperoni"
+                    name="toppings"
+                    value="pepperoni"
+                  />
+                </li>
+                <li>
+                  <label for="pineapple">Pineapple</label>
+                  <input
+                    type="checkbox"
+                    id="pineapple"
+                    name="toppings"
+                    value="pineapple"
+                  />
+                </li>
+                <li>
+                  <label for="onion">Onion</label>
+                  <input
+                    type="checkbox"
+                    id="onion"
+                    name="toppings"
+                    value="onion"
+                  />
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset>
+              <legend>Take out our eat in?</legend>
+              <ul>
+                <li>
+                  <label for="eat">Take out</label>
+                  <input
+                    type="radio"
+                    id="takeOut"
+                    name="eat"
+                    value="takeOut"
+                    checked
+                  />
+                </li>
+                <li>
+                  <label for="eat">Eat in</label>
+                  <input type="radio" id="eat-in" name="eat" value="eat-in" />
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+          <li>
+            <button type="submit">MAKE THE ORDER</button>
+          </li>
+        </ul>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
+
+<!-- Think of the various pieces of information that you’d need to collect from someone to deliver them a pizza. This might include the following:
+Number of pizzas
+Size (number of slices)
+Shape (square or round)
+Toppings
+Deep dish, thin crust or some other crust types
+Take out, delivery, or eat-in g. And so on…
+Build a FORM that would allow a visitor to order their pizza(s), including a variety of form controls such as:
+labels
+fieldsets/legends
+text boxes
+select menus
+radio buttons
+checkboxes
+text areas
+submit/reset buttons
+…and any others that you feel make sense.
+Include at least one <img /> element to insert a relevant illustration or photograph inside a paragraph in the page with an alt attribute. Ensure that the type of file is appropriate to the image (.jpg for a photograph, .png or .gif for an illustration/graphic).
+Include helpful HTML comments to make the code more friendly and easy to maintain. Ensure that your code is also formatted appropriately.
+Have fun.   -->

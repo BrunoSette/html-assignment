@@ -1,0 +1,30 @@
+header,
+img {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  justify-content: baseline;
+}
+
+h1 {
+  color: red;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+li {
+  padding: 8px;
+}
