@@ -28,7 +28,7 @@
     <main>
       <h2>Make your order online!</h2>
       <form action="/order.php" method="post">
-        <ul>
+        <ul class="toppings">
           <li>
             <fieldset>
               <legend>How many Pizzas?</legend>
@@ -152,25 +152,18 @@
             <fieldset>
               <legend>Take out our eat in?</legend>
               <ul>
-                <li>
-                  <label for="eat">Take out</label>
-                  <input
-                    type="radio"
-                    id="takeOut"
-                    name="eat"
-                    value="takeOut"
-                    checked
-                  />
-                </li>
-                <li>
-                  <label for="eat">Eat in</label>
-                  <input type="radio" id="eat-in" name="eat" value="eat-in" />
-                </li>
+                <select name="eatin" id="eatin" form="eatin">
+                  <option value="eatin">Eat In</option>
+                  <option value="takeout">Take Out</option>
+                </select>
               </ul>
             </fieldset>
+            <textarea name="comment" rows="10">Any comments...</textarea>
           </li>
+
           <li>
             <button type="submit">MAKE THE ORDER</button>
+            <button type="reset">RESET</button>
           </li>
         </ul>
       </form>
