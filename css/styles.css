@@ -5,8 +5,12 @@ img {
 }
 
 main {
+  padding-top: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: baseline;
+  width: 80%;
+  margin: auto;
 }
 
 h1 {
@@ -28,9 +32,28 @@ ul {
 li {
   padding: 8px;
   display: block;
+  padding-right: 0;
+}
+
+.order-title{
+  text-align: center;
 }
 
 .toppings {
   display: flex;
   flex-direction: column;
+  padding-left: 0;
+}
+
+.form-textarea{
+  margin-top: 30px;
+  width: 100%;
+}
+
+.btn-area{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 25%;
+  gap: 10px;
 }

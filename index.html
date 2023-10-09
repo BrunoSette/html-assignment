@@ -1,175 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
 
-    <title>HTML Pizza</title>
-  </head>
-  <body>
-    <nav>
-      <h1>HTML Pizzaria</h1>
-      <ul>
-        <li><a href="default.html">HOME</a></li>
-        <li><a href="news.html">ORDERS</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-        <li><a href="about.html">ABOUT</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <title>HTML Pizza</title>
+</head>
+
+<body>
+  <nav>
+    <h1>HTML Pizzaria</h1>
+    <ul>
+      <li><a href="default.html">HOME</a></li>
+      <li><a href="news.html">ORDERS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+    </ul>
+  </nav>
+  <header>
+    <img src="https://i.pinimg.com/originals/45/eb/98/45eb98c8637d591a1bde451eb1bce941.png" alt="Html Pizzaria"
+      height="300" width="600" />
+  </header>
+  <main>
+    <h2 class="order-title">Make your order online!</h2>
+    <form action="/order.php" method="post">
+      <ul class="toppings">
+        <li>
+          <fieldset>
+            <legend>How many Pizzas?</legend>
+            <ul>
+              <li>
+                <label for="pizzas-qty">Quantity of pizzas</label>
+                <!--Qty input with a validation for minimum value, as it is not possible order zero or less pizzas-->
+                <input type="number" id="pizzas-qty" name="meal" value="pizzas-qty" min="1" />
+              </li>
+            </ul>
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <legend>What is the size?</legend>
+            <!--Radio button, as it is a single choice form control-->
+            <ul>
+              <li>
+                <label for="small">Small</label>
+                <input type="radio" id="small" name="size" value="small" />
+              </li>
+              <li>
+                <label for="medium">Medium</label>
+                <input type="radio" id="medium" name="size" value="medium" />
+              </li>
+              <li>
+                <label for="large">Large</label>
+                <input type="radio" id="large" name="size" value="large" />
+              </li>
+            </ul>
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <legend>What is the shape?</legend>
+            <ul>
+              <li>
+                <label for="square">Square</label>
+                <input type="radio" id="square" name="shape" value="square" checked />
+              </li>
+              <li>
+                <label for="rounded">Rounded</label>
+                <input type="radio" id="rounded" name="shape" value="rounded" />
+              </li>
+            </ul>
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <legend>Select the style</legend>
+            <ul>
+              <li>
+                <label for="deep-dish">Deep dish</label>
+                <input type="radio" id="deep-dish" name="style" value="deep-dish" checked />
+              </li>
+              <li>
+                <label for="thin-crust">Thin crust</label>
+                <input type="radio" id="thin-crust" name="style" value="thin-crust" />
+              </li>
+            </ul>
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <legend>Choose all the toppings</legend>
+            <!--The user can select as many toppings as they want, so we set a checkbox control-->
+            <ul>
+              <li>
+                <label for="bacon">Bacon</label>
+                <input type="checkbox" id="bacon" name="toppings" value="bacon" />
+              </li>
+              <li>
+                <label for="corn">Corn</label>
+                <input type="checkbox" id="corn" name="toppings" value="corn" />
+              </li>
+              <li>
+                <label for="ham">Ham</label>
+                <input type="checkbox" id="ham" name="toppings" value="ham" />
+              </li>
+              <li>
+                <label for="pepperoni">Pepperoni</label>
+                <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni" />
+              </li>
+              <li>
+                <label for="pineapple">Pineapple</label>
+                <input type="checkbox" id="pineapple" name="toppings" value="pineapple" />
+              </li>
+              <li>
+                <label for="onion">Onion</label>
+                <input type="checkbox" id="onion" name="toppings" value="onion" />
+              </li>
+            </ul>
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <legend>Contact info</legend>
+            <label for="email">Enter your email address</label>
+            <!--As we are asking for the user email, there is a validation for it-->
+            <input type="text" id="email" name="meal" type="email" />
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <legend>Take out our eat in?</legend>
+            <select name="eatin" id="eatin" title="eatin">
+              <option value="eatin">Eat In</option>
+              <option value="takeout">Take Out</option>
+            </select>
+
+          </fieldset>
+          <textarea title="comments" name="comment" rows="10" placeholder="Any comments..."
+            class="form-textarea"></textarea>
+        </li>
       </ul>
-    </nav>
-    <header>
-      <img
-        src="https://i.pinimg.com/originals/45/eb/98/45eb98c8637d591a1bde451eb1bce941.png"
-        alt="Html Pizzaria"
-        height="300"
-        width="600"
-      />
-    </header>
-    <main>
-      <h2>Make your order online!</h2>
-      <form action="/order.php" method="post">
-        <ul class="toppings">
-          <li>
-            <fieldset>
-              <legend>How many Pizzas?</legend>
-              <ul>
-                <li>
-                  <label for="Small"></label>
-                  <input
-                    type="number"
-                    id="soup"
-                    name="meal"
-                    value="soup"
-                    checked
-                  />
-                </li>
-              </ul>
-            </fieldset>
-          </li>
-          <li>
-            <fieldset>
-              <legend>What is the size?</legend>
-              <ul>
-                <li>
-                  <label for="Small">Small</label>
-                  <input
-                    type="radio"
-                    id="soup"
-                    name="size"
-                    value="soup"
-                    checked
-                  />
-                </li>
-                <li>
-                  <label for="Medium">Medium</label>
-                  <input type="radio" id="curry" name="size" value="curry" />
-                </li>
-                <li>
-                  <label for="Large">Large</label>
-                  <input type="radio" id="pizza" name="size" value="large" />
-                </li>
-              </ul>
-            </fieldset>
-          </li>
-          <li>
-            <fieldset>
-              <legend>What is the shape?</legend>
-              <ul>
-                <li>
-                  <label for="square">Square</label>
-                  <input
-                    type="radio"
-                    id="square"
-                    name="shape"
-                    value="square"
-                    checked
-                  />
-                </li>
-                <li>
-                  <label for="Medium">Rounded</label>
-                  <input type="radio" id="curry" name="shape" value="medium" />
-                </li>
-              </ul>
-            </fieldset>
-          </li>
-          <li>
-            <fieldset>
-              <legend>Choose all the toppings</legend>
-              <ul>
-                <li>
-                  <label for="bacon">Bacon</label>
-                  <input
-                    type="checkbox"
-                    id="bacon"
-                    name="toppings"
-                    value="bacon"
-                  />
-                </li>
-                <li>
-                  <label for="corn">Corn</label>
-                  <input
-                    type="checkbox"
-                    id="corn"
-                    name="toppings"
-                    value="corn"
-                  />
-                </li>
-                <li>
-                  <label for="ham">Ham</label>
-                  <input type="checkbox" id="ham" name="toppings" value="ham" />
-                </li>
-                <li>
-                  <label for="pepperoni">Pepperoni</label>
-                  <input
-                    type="checkbox"
-                    id="pepperoni"
-                    name="toppings"
-                    value="pepperoni"
-                  />
-                </li>
-                <li>
-                  <label for="pineapple">Pineapple</label>
-                  <input
-                    type="checkbox"
-                    id="pineapple"
-                    name="toppings"
-                    value="pineapple"
-                  />
-                </li>
-                <li>
-                  <label for="onion">Onion</label>
-                  <input
-                    type="checkbox"
-                    id="onion"
-                    name="toppings"
-                    value="onion"
-                  />
-                </li>
-              </ul>
-            </fieldset>
-          </li>
-          <li>
-            <fieldset>
-              <legend>Take out our eat in?</legend>
-              <ul>
-                <select name="eatin" id="eatin" form="eatin">
-                  <option value="eatin">Eat In</option>
-                  <option value="takeout">Take Out</option>
-                </select>
-              </ul>
-            </fieldset>
-            <textarea name="comment" rows="10">Any comments...</textarea>
-          </li>
+      <section class="btn-area">
+        <button type="submit">MAKE THE ORDER</button>
+        <button type="reset"> RESET</button>
+      </section>
+      </ul>
+    </form>
+  </main>
+  <footer></footer>
+</body>
 
-          <li>
-            <button type="submit">MAKE THE ORDER</button>
-            <button type="reset">RESET</button>
-          </li>
-        </ul>
-      </form>
-    </main>
-    <footer></footer>
-  </body>
 </html>
 
 <!-- Think of the various pieces of information that you’d need to collect from someone to deliver them a pizza. This might include the following:
