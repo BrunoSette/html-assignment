@@ -4,13 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--CSS import-->
   <link rel="stylesheet" href="css/styles.css" />
 
+  <!--Title on the browser's tab/window-->
   <title>HTML Pizza</title>
 </head>
 
 <body>
   <nav>
+    <!-- Navigation section with the website's title and menu options -->
     <h1>HTML Pizzaria</h1>
     <ul>
       <li><a href="default.html">HOME</a></li>
@@ -20,14 +23,17 @@
     </ul>
   </nav>
   <header>
+    <!-- Website header with company logo -->
     <img src="https://i.pinimg.com/originals/45/eb/98/45eb98c8637d591a1bde451eb1bce941.png" alt="Html Pizzaria"
       height="300" width="600" />
   </header>
   <main>
+    <!-- Order form title -->
     <h2 class="order-title">Make your order online!</h2>
     <form action="/order.php" method="post">
       <ul class="toppings">
         <li>
+          <!--Each fieldset contains a specific form field, with labels/legends and input controls-->
           <fieldset>
             <legend>How many Pizzas?</legend>
             <ul>
@@ -143,13 +149,17 @@
         </li>
       </ul>
       <section class="btn-area">
+        <!-- Form submission and reset buttons -->
         <button type="submit">MAKE THE ORDER</button>
         <button type="reset"> RESET</button>
       </section>
       </ul>
     </form>
   </main>
-  <footer></footer>
+  <footer class="footer">
+     <!-- Footer area -->
+    <p>All rights reserved - 2023</p>
+  </footer>
 </body>
 
 </html>

@@ -57,3 +57,9 @@ li {
   width: 25%;
   gap: 10px;
 }
+
+.footer{
+  margin-top: 20px;
+  font-size: 10px;
+  text-align: center;
+}
